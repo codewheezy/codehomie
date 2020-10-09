@@ -6,25 +6,18 @@
     <title>Codehomie</title>
     <!-- Css -->
     <link rel="stylesheet" type="text/css" href="./assets/css/styles.css">
-    <script src="./assets/js/main.js"></script>
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
-    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"> -->
 </head>
 <body>
     <div id="app">
         <header class="header">
-            <div class="header-wrapper">
+            <div class="page-wrapper">
                 <div class="header-inner">
                     <div class="moblie-toggle-btn">
-                        <button class="menuButton no-btn">
-                            <span class="sr-only">Open Site Navigation</span>
-                            <svg style="width: 16px; height: 11px;" viewBox="0 0 14 10" class="fill" fill="#26292c" aria-hidden="true">
-                                <rect width="16" height="2"></rect>
-                                <rect width="16" height="2" y="4"></rect>
-                                <rect width="16" height="2" y="8"></rect>
-                            </svg>
-                        </button>
+                      <div class="circle icon">
+                        <span class="line top"></span>
+                        <span class="line middle"></span>
+                        <span class="line bottom"></span>
+                      </div>
                     </div>
                     <div class="header-window-logo">
                         <a href="#" class="header-logo">
@@ -52,12 +45,44 @@
                     </nav>
                     <div class="cntctnmbr"></div>
                     <div class="tp-btn-hdr change">
-                        <a class="ray-button ray-button-primary ray-button-compact">Hire Me</a>
+                        <a class="pb-button pb-button-default pb-button-lg">Hire Me</a>
                     </div>
                 </div>
             </div>
         </header>
-
+        <div class="home-mid" id="home-mid">
+          <section class="home-banner">
+            <div class="page-wrapper">
+              <div class="ray-grid">
+                <div>
+                  <h1>Hello, I am Uchenna</h1>
+                  <div class="hero-two-colums">
+                    <p>A software engineer and entrepreneur based in Nigeria, With over 2 year of experience in Software, Web and Mobile Development.</p>
+                  </div>
+                  <div class="hero-two-columns_buttons_wrapper hero-two-columns_two-buttons">
+                    <div class="hero-two-columns-button">
+                      <a class="pb-button pb-button--xl ray-button-green">Hire Me</a>
+                    </div>
+                    <div class="hero-two-columns-button">
+                      <button class="video-play-button pb-button pb-button--xl pb-button-default">
+                        <div class="video-play-button_icon"></div>
+                        <div>Watch video</div>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="hero-two-columns-animation">
+                    <img src="./assets/img/animation-image.gif" class="intro-animation-img" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
     </div>
+    <!-- Js -->
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/main.js"></script>
 </body>
 </html>
