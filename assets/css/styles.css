@@ -28,7 +28,7 @@
     box-sizing: border-box;
 }
 body {
-    color: #3C3F40;
+    color: #26292c;
     background: #ffffff;
     font-family: SourceSansProRegular,sans-serif;
     font-weight: 500;
@@ -46,6 +46,10 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 56px;
   line-height: 62px;
+}
+h2 {
+    font-size: 48px;
+    line-height: 53px;
 }
 h1+*, h2+*, h3+*, h4+*, h5+*, h6+* {
   margin-top: 20px;
@@ -74,7 +78,7 @@ ol,ul {
     display: inline-block;
 }
 .page-nav li a {
-    color: #3C3F40;
+    color: #26292c;
     position: relative;
     font-size: 20px;
     line-height: 1.5em;
@@ -109,7 +113,7 @@ ol,ul {
   position: absolute;
   height: 3px;
   width: 30px;
-  background-color: #3C3F40;
+  background-color: #26292c;
   border-radius:4px;
   transition: all cubic-bezier(0.26, 0.1, 0.27, 1.55) 0.35s;
 }
@@ -208,13 +212,28 @@ button.video-play-button {
   padding-top: 40px;
   padding-bottom: 80px;
 }
+.home-banner:not(:first-child) {
+    padding-top: 80px;
+}
 .home-banner .ray-grid {
   position: relative;
+}
+.home-banner:after {
+    margin-top: 80px;
+}
+.home-banner:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(38,41,44,.12);
 }
 .ray-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 80px;
+    -webkit-box-align: center;
     align-items: center;
 }
 .hero-two-columns_buttons_wrapper {
@@ -224,12 +243,40 @@ button.video-play-button {
   margin: 40px 0 20px;
 }
 .hero-two-columns-animation {
-    display: block;
+    display: flex;
     margin: 0 auto;
     max-width: 100%;
+    flex-direction: row;
+    justify-content: center;
 }
 .intro-animation-img {
-    height: 339px;
+    width: 512px;
+}
+.hero-two-columns__subtitle {
+    font-size: 14px;
+}
+.cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.cards .card-block:not(:first-child) {
+    margin-top: 80px;
+}
+.card-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card-block-col3 {
+    grid-gap: 20px 10px;
+}
+.card-block-wrapper {
+    display: grid;
+}
+.card {
+    position: relative;
 }
 @media (min-width: 1195px) {
     .page-wrapper {
@@ -237,6 +284,9 @@ button.video-play-button {
         padding: 0 60px;
         width: 100%;
         max-width: 1440px;
+    }
+    .card-block-col3 {
+        grid-template-columns: repeat(3,1fr);
     }
 }
 @media (max-width: 1195px) {
@@ -295,6 +345,32 @@ button.video-play-button {
     .ray-button-compact {
         padding: 5px 10px;
     }
+    .home-banner {
+        padding-top: 20px;
+        padding-bottom: 40px;
+    }
+    .home-banner:not(:first-child) {
+        padding-top: 40px;
+    }
+    .home-banner:after {
+        margin-top: 40px;
+    }
+    .ray-grid {
+        grid-template-columns: 1fr;
+        grid-gap: 0;
+    }
+    .hero-two-columns-title, .hero-two-columns__subtitle, .hero-two-colums {
+        text-align: center;
+    }
+    /* .hero-two-colums {
+        text-align: center;
+    } */
+    .hero-two-columns-button {
+        display: grid;
+    }
+    .hero-two-columns__subtitle {
+        margin-bottom: 40px;
+    }
 }
 @media (max-width: 1194px) and (min-width: 600px) {
   .page-wrapper {
@@ -304,9 +380,26 @@ button.video-play-button {
     padding: 0px 48px;
   }
 }
+@media screen and (max-width: 712px) and (min-width: 1px) {
+    .hero-two-columns_two-buttons {
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 1104px) and (min-width: 713px) {
+    .hero-two-columns_buttons_wrapper {
+        justify-content: center;
+    }
+    .hero-two-columns_two-buttons {
+        grid-template-columns: repeat(2,minmax(250px,max-content));
+    }
+    .hero-two-columns-animation {
+        max-width: 66%;
+    }
+}
 @media (max-width: 599px) {
     .page-wrapper {
-        margin: auto;
+        margin:0 auto;
         padding: 0 16px;
         width: 100%;
         max-width: 100%;
@@ -323,5 +416,16 @@ button.video-play-button {
     }
     #home-mid{
       padding-top: 72px;
+    }
+    h1 {
+        font-size: 38px;
+        line-height: 42px;
+    }
+    h2 {
+        font-size: 34px;
+        line-height:40px ;
+    }
+    .intro-animation-img {
+        width: 320px;
     }
 }
